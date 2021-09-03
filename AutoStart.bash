@@ -103,6 +103,29 @@ $run set service nat rule 5035 source address 10.0.3.0/28
 $run set service nat rule 5035 type masquerade
 echo "[+] Added NAT from MGMT -> LAN "
 
+$run set service nat rule 5040 description "NAT from VPN to WAN"
+$run set service nat rule 5040 outbound-interface eth0
+$run set service nat rule 5040 source address 10.0.4.0/30
+$run set service nat rule 5040 type masquerade
+echo "[+] Added NAT from VPN -> WAN"
+
+$run set service nat rule 5045 description "NAT from VPN to LAN"
+$run set service nat rule 5045 outbound-interface eth1
+$run set service nat rule 5045 source address 10.0.4.0/30
+$run set service nat rule 5045 type masquerade
+echo "[+] Added NAT from VPN -> LAN"
+
+$run set service nat rule 5050 description "NAT from VPN to DMZ"
+$run set service nat rule 5050 outbound-interface eth2
+$run set service nat rule 5050 source address 10.0.4.0/30
+$run set service nat rule 5050 type masquerade
+echo "[+] Added NAT from VPN -> DMZ"
+
+$run set service nat rule 5055 description "NAT from VPN to MGMT"
+$run set service nat rule 5055 outbound-interface eth3
+$run set service nat rule 5055 source address 10.0.4.0/30
+$run set service nat rule 5055 type masquerade
+echo "[+] Added NAT from VPN -> MGMT"
 
 ### Commit & Save
 
