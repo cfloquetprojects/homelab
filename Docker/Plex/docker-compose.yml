@@ -1,0 +1,39 @@
+
+version: "3"
+services:
+  plex:
+    container_name: plex
+    image: plexinc/pms-docker:latest
+    network_mode: bridge
+    restart: unless-stopped
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - PUID=1000 # user account id on the system
+      - PGID=1000 # group id on the system
+      - TZ=America/New_York
+      - UMASK_SET=022
+      - VERSION=docker
+      - PLEX_CLAIM:claim-VaF5ZLgavM9GxR9Skdw2
+    ports:
+      # Port listing from Plex website as of 2021-8-24.
+
+      # - "1900:1900/udp" # (for access to the Plex DLNA Server)
+      # - "5353:5353/udp" # (for older Bonjour/Avahi network discovery)
+      - "1900:1900/udp" # Maybe network discovery
+      - "5353:5353/udp" # Maybe network discovery
+      - "32400:32400/tcp" # (for access to the Plex Media Server) [required]
+      - "3005:3005/tcp" # (for controlling Plex Home Theater via Plex Companion)
+      - "8324:8324/tcp" # (for controlling Plex for Roku via Plex Companion)
+      - "32410:32410/udp" # (for current GDM network discovery)
+      - "32412:32412/udp" # (for current GDM network discovery)
+      - "32413:32413/udp" # (for current GDM network discovery)
+      - "32414:32414/udp" # (for current GDM network discovery)
+      - "32469:32469" # (for access to the Plex DLNA Server)
+    volumes:
+      - /opt/docker/plex/config:/config
+      - /dev/shm:/transcode
+      - /server/media:/server/media
+      - /plex/TV:/TV
+      - /plex/Movies:/Movies
+      - /plex/Anime:/Anime
