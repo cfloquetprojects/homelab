@@ -1,5 +1,5 @@
-<h1 align="center">Hello there 👋, welcome to my homelab project page</h1>
-<h3 align="center">A cyber nerd with a a few side projects to keep me extra busy.</h3>
+<h1 align="center">Welcome to my homelab project page!</h1>
+<h3 align="center">This repo just holds few side projects to keep me extra busy.</h3>
 
 - 📫 How to reach me **charlie.floquet@protonmail.com**
 
