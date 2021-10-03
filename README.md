@@ -4,9 +4,5 @@
 - 📫 How to reach me **charlie.floquet@protonmail.com**
 
 - 👨‍💻 Currently employed as a **Security Engineer in Boston, MA**
-
-- ⚡ Fun fact **I love cooking, football, basketball, and going on walks with my dog!**
-
-
   
 </p>
