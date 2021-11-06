@@ -13,7 +13,13 @@ sed -i 's/\("presharedKey": "\).*\(",\)/\1\2/' log.json
 # retrieve date for logkeeping purposes:
 dt=$(date '+%m.%d.%Y-%H:%M:%S')
 
+# create a new folder for each day
+folder=$(date '+%m.%d.%Y')
+
+# create directory for new day if it doesn't already exist
+mkdir -p /var/log/wireguard/$folder
+
 # define the absolute path for where we will be storing our logs before forwarding
-logPath="/var/log/wireguard/$dt-log.json"
+logPath="/var/log/wireguard/$folder/$dt-log.json"
 
 cp log.json $logPath
