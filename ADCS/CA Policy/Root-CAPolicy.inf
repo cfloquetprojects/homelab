@@ -1,0 +1,18 @@
+[Version]
+Signature="$Windows NT$"
+[PolicyStatementExtension]
+Policies=InternalPolicy
+[InternalPolicy]
+OID= 1.2.3.4.1455.67.89.5
+Notice="Legal Policy Statement"
+URL=http://crl.lab.local/pki/cps.txt
+[Certsrv_Server]
+RenewalKeyLength=2048
+RenewalValidityPeriod=Years
+RenewalValidityPeriodUnits=20
+CRLPeriod=weeks
+CRLPeriodUnits=26
+CRLDeltaPeriod=Days
+CRLDeltaPeriodUnits=0
+LoadDefaultTemplates=0
+AlternateSignatureAlgorithm=0
