@@ -14,7 +14,7 @@ services:
       - TZ=America/New_York
       - UMASK_SET=022
       - VERSION=docker
-      - PLEX_CLAIM:claim-VaF5ZLgavM9GxR9Skdw2
+      - PLEX_CLAIM:nonono
     ports:
       # Port listing from Plex website as of 2021-8-24.
 
