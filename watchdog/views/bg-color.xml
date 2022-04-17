@@ -1,0 +1,14 @@
+<row depends="$no_show$">
+    <panel>
+      <html>
+        <style>
+          div[data-view="views/shared/appbar/Master"] {
+            background-color: #1e81b0;
+            }
+           div[data-role="underline"] {
+            background-color: white;
+           }
+        </style>
+      </html>
+    </panel>
+  </row>
