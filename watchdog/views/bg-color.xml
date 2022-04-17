@@ -1,3 +1,5 @@
+### insert this configuration directly after the <label> tag in each dashboard. 
+
 <row depends="$no_show$">
     <panel>
       <html>
